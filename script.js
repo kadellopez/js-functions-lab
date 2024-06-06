@@ -157,12 +157,24 @@ Example: convertTemperature(32, 'F') should return 0 (Celsius).
 Complete the exercise in the space below:
 */
 
-const convertTemperature = (temp, scale) => {
+// const convertTemperature = (temp, scale) => {
+//       if (scale = 'C') {
+//         return temp * 9/5 + 32
+//       } else (scale = 'F') {
+//         return (temp - 32) * 5/9 }
+//       }
 
+function convertTemperature(temp, scale) {
+    if (scale == 'C') {
+        return temp * 9/5 + 32;
+    } else if (scale == 'F') {
+        return (temp - 32) * 5/9;
+    }
 }
 
 
-console.log('Exercise 8 Result:', convertTemperature(32, "C"));
+
+console.log('Exercise 8 Result:', convertTemperature(32, 'C'));
 
 
 /*
@@ -181,11 +193,19 @@ Example: basicCalculator(10, 5, 'subtract') should return 5.
 Complete the exercise in the space below:
 */
 
+
 const basicCalculator = (num1, num2, operator) => {
-    
+    if (operator === 'add') {
+        return num1 + num2;
+    } else if (operator === 'subtract') {
+        return num1 - num2;
+    } else if (operator === 'multiply') {
+        return num1 * num2;
+    } else if (operator === 'divide') {
+        return num1 / num2;
+    }
 }
 
 console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
 
 //the last two are very difficult 
-
