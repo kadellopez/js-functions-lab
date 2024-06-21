@@ -139,7 +139,7 @@ Complete the exercise in the space below:
 */
 
 const calculateTip = (x, y) => {
-      return x % y
+      return (x * y) / 100
 }
 console.log('Exercise 7 Result:', calculateTip(50, 20));
 
@@ -157,18 +157,12 @@ Example: convertTemperature(32, 'F') should return 0 (Celsius).
 Complete the exercise in the space below:
 */
 
-// const convertTemperature = (temp, scale) => {
-//       if (scale = 'C') {
-//         return temp * 9/5 + 32
-//       } else (scale = 'F') {
-//         return (temp - 32) * 5/9 }
-//       }
 
-function convertTemperature(temp, scale) {
+const convertTemperature = (temp, scale) => {
     if (scale == 'C') {
-        return temp * 9/5 + 32;
+        return temp * 9/5 + 32
     } else if (scale == 'F') {
-        return (temp - 32) * 5/9;
+        return (temp - 32) * 5/9
     }
 }
 
@@ -196,16 +190,91 @@ Complete the exercise in the space below:
 
 const basicCalculator = (num1, num2, operator) => {
     if (operator === 'add') {
-        return num1 + num2;
+        return num1 + num2
     } else if (operator === 'subtract') {
-        return num1 - num2;
-    } else if (operator === 'multiply') {
-        return num1 * num2;
+        return num1 - num2
+    } else if (operator ==='multiply') {
+        return num1 * num2
     } else if (operator === 'divide') {
-        return num1 / num2;
+        return num1 / num2
     }
 }
 
 console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
 
-//the last two are very difficult 
+
+/*
+Exercise 10: calculateGrade()
+
+Define a function called calculateGrade. 
+It should take a numerical score and return the corresponding letter 
+grade (A, B, C, D, F). 
+
+For example, 90 and above yields an 'A', 80-89 is a 'B', 
+and 70-79 is a 'C', 60-69 is a 'D' and anything lower than a 60 is an 'F'.
+
+Example: calculateGrade(100) should return A.
+
+Complete the exercise in the space below:
+*/
+
+const calculateGrade = (grade) => {
+    if (grade >= 90) {
+        return 'A'
+    } else if (grade >= 80) {
+        return 'B'
+    } else if (grade >= 70) {
+        return 'C'
+    } else if (grade >= 60) {
+        return 'D'
+    } else {
+        return 'F'
+    }
+}
+
+console.log('Exercise 10 Result:', calculateGrade(85));
+
+
+/*
+Exercise 11: createUsername()
+
+Define a function called createUsername. 
+It should take a first name and a last name and return a username. 
+
+The username should be a combination of the following:
+- The first three letters of the first name.
+- The first three letters of the last name.
+- The total character count of the first and last name combined.
+
+Example: createUsername('Samantha', 'Green') should return 'SamGre12'.
+
+Complete the exercise in the space below:
+*/
+
+const createUsername = (firstName, lastName) => {
+    
+    let first = firstName.slice(0, 3)
+    
+    let last = lastName.slice(0, 3)
+    
+    let totalLength = firstName.length + lastName.length
+    
+    let username = first + last + totalLength
+    
+    return username
+}
+
+console.log('Exercise 11 Result:', createUsername("Samantha", "Green"));
+
+/*
+Exercise 12: numArgs()
+
+Challenge yourself with numArgs. 
+This function should return the count of arguments passed to it when called.
+
+Complete the exercise in the space below:
+*/
+
+
+
+console.log('Exercise 12 Result:', numArgs(1, 2, 3, 4));
